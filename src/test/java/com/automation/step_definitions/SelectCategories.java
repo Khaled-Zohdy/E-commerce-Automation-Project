@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 public class SelectCategories {
-    Categories categories = Base.pagebase.categoriesPage();
+    Categories categories = Hooks.pagebase.categoriesPage();
 
    @When ("user enter to category page")
     public void enter_to_category_page() {

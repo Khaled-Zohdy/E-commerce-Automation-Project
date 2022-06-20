@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import pages.FilterWithColor;
 
 public class ColorsFilter {
-    FilterWithColor filter = Base.pagebase.filterWithColorPage();
+    FilterWithColor filter = Hooks.pagebase.filterWithColorPage();
 
     @Given("user go to category page")
     public void go_to_category_page()  {

@@ -8,11 +8,11 @@ import org.testng.Assert;
 import pages.Cart;
 
 public class AddToCart {
-    Cart cart = Base.pagebase.cartPage();
+    Cart cart = Hooks.pagebase.cartPage();
 
     @Given("user can select a product")
     public void select_a_product() {
-        Base.driver.navigate().to("https://demo.nopcommerce.com/apple-macbook-pro-13-inch");
+        Hooks.driver.navigate().to("https://demo.nopcommerce.com/apple-macbook-pro-13-inch");
     }
 
     @When("user can add product to shipping cart")

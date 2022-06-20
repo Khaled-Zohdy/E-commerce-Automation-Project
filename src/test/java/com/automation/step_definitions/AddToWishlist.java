@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 public class AddToWishlist {
-    Wishlist wishlist = Base.pagebase.wishlistPage();
+    Wishlist wishlist = Hooks.pagebase.wishlistPage();
 
     @Given("user could select a product")
         public void select_a_product(){

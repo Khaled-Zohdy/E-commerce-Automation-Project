@@ -9,7 +9,7 @@ import pages.PageBase;
 
 import java.util.concurrent.TimeUnit;
 
-public class Base {
+public class Hooks {
     static WebDriver driver;
     static PageBase pagebase;
     @BeforeAll

@@ -12,7 +12,7 @@ public class Login {
    
     static Register R = new Register();
 
-    LoginPage loginPage = Base.pagebase.loginpage();
+    LoginPage loginPage = Hooks.pagebase.loginpage();
     
     @Given("user go to login page")
     public void go_to_login_page() throws InterruptedException {

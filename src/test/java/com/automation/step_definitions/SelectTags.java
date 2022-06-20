@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Random;
 
 public class SelectTags {
-    TagsPage tags = Base.pagebase.tagsPage();
+    TagsPage tags = Hooks.pagebase.tagsPage();
 
     @Given("user navigate to tags page")
     public void tags_page(){
-        Base.driver.navigate().to("https://demo.nopcommerce.com/producttag/all");
+        Hooks.driver.navigate().to("https://demo.nopcommerce.com/producttag/all");
     }
 
     @Then("select random tags")

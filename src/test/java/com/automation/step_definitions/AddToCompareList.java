@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 public class AddToCompareList {
-    CompareList compare = Base.pagebase.compareListPage();
+    CompareList compare = Hooks.pagebase.compareListPage();
 
     @Given("user select a product")
     public void select_a_product(){

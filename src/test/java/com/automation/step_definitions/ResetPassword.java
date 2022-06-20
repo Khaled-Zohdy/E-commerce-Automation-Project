@@ -9,7 +9,7 @@ import pages.MyAccount;
 
 public class ResetPassword {
     static Register R = new Register();
-    MyAccount myAccountPage = Base.pagebase.myAccountPage();
+    MyAccount myAccountPage = Hooks.pagebase.myAccountPage();
 
     @Given("user go to account page")
     public void go_to_account_page()  {

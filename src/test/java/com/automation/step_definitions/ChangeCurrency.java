@@ -10,7 +10,7 @@ import org.testng.Assert;
 import pages.Currencies;
 
 public class ChangeCurrency {
-    Currencies currencies = Base.pagebase.currenciesPage();
+    Currencies currencies = Hooks.pagebase.currenciesPage();
 
     @Given("user click on currencies list")
     public void currencies_list()  {

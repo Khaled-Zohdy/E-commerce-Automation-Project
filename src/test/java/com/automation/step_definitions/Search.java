@@ -11,7 +11,7 @@ import org.testng.Assert;
 
 public class Search {
 
-    pages.Search searchPage = Base.pagebase.searchPage();
+    pages.Search searchPage = Hooks.pagebase.searchPage();
 
     @When("user clicks on search field")
     public void clicks_on_search_field()
@@ -28,7 +28,7 @@ public class Search {
 
     @Then("user could find relative results")
     public void find_relative_results()
-    {    int count = Base.driver.findElements(By.cssSelector("h2[class=\"product-title\"] a")).size();
+    {    int count = Hooks.driver.findElements(By.cssSelector("h2[class=\"product-title\"] a")).size();
         
         Assert.assertTrue(searchPage.result() > 0);
         for (int x = 0; x < count ; x++) {

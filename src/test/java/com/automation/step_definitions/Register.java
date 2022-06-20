@@ -15,7 +15,7 @@ public class Register {
    
    String pass = "P@ssw0rd";
    
-   Registration registrationPage = Base.pagebase.registrationPage();
+   Registration registrationPage = Hooks.pagebase.registrationPage();
 
    @Given("user go to register page")
    public void go_to_register_page()  {
@@ -24,9 +24,12 @@ public class Register {
 
    @When("user enter a valid data")
    public void enter_a_valid_data() throws InterruptedException {
+	  registrationPage.gender();
       registrationPage.fName(faker.name().firstName());
       registrationPage.lName(faker.name().lastName());
+      registrationPage.birthDate();
       registrationPage.email(email);
+      registrationPage.company();
       registrationPage.password(pass);
       registrationPage.confirmPassword(pass);
    }

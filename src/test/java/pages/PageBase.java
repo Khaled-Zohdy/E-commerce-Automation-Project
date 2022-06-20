@@ -39,7 +39,7 @@ public class PageBase {
         jse = (JavascriptExecutor) driver;
         jse.executeScript("scrollBy(0," + scroll + ")");
     }
-//0
+
     public LoginPage loginpage(){
         return new LoginPage(driver);
     }

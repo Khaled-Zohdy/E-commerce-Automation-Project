@@ -10,12 +10,12 @@ import pages.Order;
 
 public class CreateOrder {
     static Faker faker = new Faker();
-    Order order = Base.pagebase.orderPage();
+    Order order = Hooks.pagebase.orderPage();
 
     @Given("go to shopping cart")
     public void go_to_shopping_cart() {
 
-        Base.driver.navigate().to("https://demo.nopcommerce.com/apple-macbook-pro-13-inch");
+        Hooks.driver.navigate().to("https://demo.nopcommerce.com/apple-macbook-pro-13-inch");
         order.addProduct();
         order.open();
     }
