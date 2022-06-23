@@ -10,10 +10,11 @@ public class Search {
     public Search(WebDriver driver) {
         this.driver = driver;
     }
-
-    private By clickField=  By.id("small-searchterms");
+ private By clickField=  By.id("small-searchterms");
     
     private By typing=  By.id("small-searchterms");
+
+    private By product = By.className("product-item");
 
     private By result=  By.cssSelector("h2[class=\"product-title\"] a");
 
@@ -27,6 +28,8 @@ public class Search {
 
     private By advanceBtn=  By.cssSelector("button[class=\"button-1 search-button\"]");
 
+    private By SKU = By.className("sku");
+
     public void clickField() {
         driver.findElement(clickField).click();
     }
@@ -34,7 +37,9 @@ public class Search {
     public void typing() {
         driver.findElement(typing).sendKeys("book");
     }
-
+    public void typing2() {
+        driver.findElement(typing).sendKeys("AP_MBP_13");
+    }
     int count;
     public  int result() {
         count = driver.findElements(result).size();
@@ -49,6 +54,14 @@ public class Search {
         return temp;
     }
 
+    public void selectProduct() {
+        driver.findElement(product).click();
+    }
+
+    public String itemSKU(){
+        String sku = driver.findElement(SKU).getText();
+        return sku;
+    }
     public void searchBtn() {
         driver.findElement(searchBtn).click();
     }

@@ -12,11 +12,24 @@ import org.testng.Assert;
 public class Search {
 
     pages.Search searchPage = Hooks.pagebase.searchPage();
-
     @When("user clicks on search field")
     public void clicks_on_search_field()
     {
         searchPage.clickField();
+    }
+
+    @When("user search with SKU of product")
+    public void search_with_product_SKU()
+    {
+        searchPage.typing2();
+        searchPage.searchBtn();
+    }
+    @Then("user could find results is true")
+    public void find_true_results()
+    {
+        searchPage.selectProduct();
+        String sku = searchPage.itemSKU();
+        Assert.assertTrue(sku.contains("AP_MBP_13"),"Not equals");
     }
 
     @And("user search with name of product")

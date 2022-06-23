@@ -7,11 +7,11 @@ Feature: F02_login | users could use login functionality to open their accounts
     And user press on login button
     Then user login to the system successfully
     
-  Scenario Outline: User can use "Follow us" with "<site>"
+   Scenario Outline: User can use "Follow us" with "<site>"
     When click on follow us "<site>"
     Then "<url>" opened successfully
     Examples:
     | site     |                 url                      |
     | facebook | https://www.facebook.com/nopCommerce     |
     | twitter  | https://twitter.com/nopCommerce          |
-    | youtube  | https://www.youtube.com/user/nopCommerce |
+    | youtube  | https://www.youtube.com/user/nopCommerce | 

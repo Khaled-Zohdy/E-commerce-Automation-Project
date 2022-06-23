@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.*;
+
 public class Currencies {
 
     public WebDriver driver ;
@@ -26,9 +28,21 @@ public class Currencies {
        return driver.findElement(change);
     }
 
-    public String changedCurrency(){
-        String currency = driver.findElement(newcurrency).getText();
-        return currency;
+    public List<String> changedCurrency() {
+
+        List<WebElement> listOfElements = driver.findElements(newcurrency);
+        List<String> arrlist = new ArrayList<String>();
+        Vector<String> v = new Vector<String>();
+
+        for (int i = 0; i < listOfElements.size(); i++) {
+             v.add(listOfElements.get(i).getText());
+            Enumeration<String> e = v.elements();
+            arrlist = Collections.list(e);
+
+        }
+
+        return arrlist;
+
     }
     
 }

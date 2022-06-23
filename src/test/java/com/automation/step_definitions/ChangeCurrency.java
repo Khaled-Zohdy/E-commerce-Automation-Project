@@ -3,11 +3,14 @@ package com.automation.step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.Currencies;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import pages.Currencies;
+
+import java.util.List;
 
 public class ChangeCurrency {
     Currencies currencies = Hooks.pagebase.currenciesPage();
@@ -36,8 +39,12 @@ public class ChangeCurrency {
     
     @Then("currency changed successfully")
     public void currenychanged(){
-        String test = currencies.changedCurrency();
-        Assert.assertTrue(test.contains("€"),"Currency not changed");
+        List<String> lst = currencies.changedCurrency();
+
+        for (String item:lst) {
+            Assert.assertTrue(item.contains("€"),"Currency not changed");
+        }
+
     }
 
 }

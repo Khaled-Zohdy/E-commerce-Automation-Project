@@ -1,12 +1,1 @@
-file:src/main/resources/features/F07_selectCategories.feature:4
-file:src/main/resources/features/F09_selectTags.feature:4
-file:src/main/resources/features/F05_addToWishList.feature:4
-file:src/main/resources/features/F04_search.feature:4:9
-file:src/main/resources/features/F08_switchCurrencies.feature:4
-file:src/main/resources/features/F10_addToCompareList.feature:4
-file:src/main/resources/features/F06_filterWithColor.feature:5
-file:src/main/resources/features/F03_resetPassword.feature:4
-file:src/main/resources/features/F12_createSuccessfulOrder.feature:4
-file:src/main/resources/features/F11_addToCart.feature:4:9
-file:src/main/resources/features/F01_register.feature:4
-file:src/main/resources/features/F02_login.feature:4:15:16:17
+file:src/main/resources/features/F02_login.feature:15
